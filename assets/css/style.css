@@ -1,0 +1,30 @@
+body {
+  display: block;
+}
+img {
+  height: 650px;
+  width: 800px;
+  margin: auto;
+  object-position: top;
+  object-fit: cover;
+}
+.slider-container {
+  padding-left: 25%;
+  padding-top: 1%;
+}
+.btn-next,
+.btn-prev {
+  height: 50px;
+  width: 100px;
+  border: 5px solid rgb(33, 19, 229);
+  background-color: rgb(229, 254, 5);
+  cursor: pointer;
+  font-size: 18px;
+}
+.btn-prev {
+  border-radius: 400px 27px 93px 0px / 150px 0px 0px 0px;
+  margin-right: 48%;
+}
+.btn-next {
+  border-radius: 0px 400px 93px 0px / 26px 150px 0px 0px;
+}

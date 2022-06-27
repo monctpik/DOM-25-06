@@ -7,11 +7,26 @@ const imagesDB = [
   "https://www.cbc.ca/kids/images/wild_and_wonderful_asian_animals_header_1140.jpg",
 ];
 
-const [prevBtn, nextBtn] = document.querySelectorAll('.slider-container button')
-const img = document.querySelector('.slider-container .slide img')
+const [prevBtn, nextBtn] = document.querySelectorAll(
+  ".slider-container button"
+);
+const img = document.querySelector(".slider-container .slider img");
 
-// const slider = new Slider();
+const slider = new Slider(imagesDB);
 
+const createSlideBtnHandler = (direction = 'next')=> () => {
+ 
+  slider.currentIndex = slider[direction === "next" ? "next" : "prev"];
+  updateView()
+};
+
+nextBtn.addEventListener("click", createSlideBtnHandler('next'));
+prevBtn.addEventListener("click", createSlideBtnHandler('prev'));
+
+function updateView() {
+  img.setAttribute("src", slider.currentSlide);
+}
+img.setAttribute("src", slider.currentSlide);
 
 // function btnHandler(){
 //   console.log('button is clicked')
