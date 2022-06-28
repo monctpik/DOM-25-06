@@ -1,22 +1,19 @@
 "use strict";
 
-                                                 КЛИКАТЬ ТОЛЬКО ТРИ РАЗА
-
-let btn = document.getElementById('test');
-
-btn.addEventListener('click', clicking())
-function clicking() {
-    let amount = 1;
-    return function() {
-        if (amount >= 3) {
-            // console.log(amount, '>3')
-            btn.removeEventListener('click',clicking)
-            btn.disabled = true
-        }
-        console.log(amount)
-        return amount++
-    }
+const anchors = document.links;
+console.log(anchors)
+function anchorHandler(e){
+    e.preventDefault()
+    console.log(e.target.dataset)
 }
+
+for (const anchor of anchors) {
+    anchor.addEventListener('click', anchorHandler)
+}
+
+
+
+
 const imagesDB = [
   "https://www.cbc.ca/kids/images/chinaanimals_header.jpg",
   "https://i.natgeofe.com/k/66d3a80c-f4c3-4410-845c-3543375eaa85/cheetah-watching_3x4.jpg",
