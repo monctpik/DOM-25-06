@@ -1,47 +1,80 @@
 "use strict";
+//
+//                                  ЦВЕТА И КЛИКИ ПО НИМ
+//
 
-const anchors = document.links;
-console.log(anchors)
-function anchorHandler(e){
-    e.preventDefault()
-    console.log(e.target.dataset)
-}
+// const buttonsColor = document.querySelectorAll("#root>button");
+// const root = document.getElementById("root");
 
-for (const anchor of anchors) {
-    anchor.addEventListener('click', anchorHandler)
-}
+// const color = ({target}) =>{
+// root.style.backgroundColor = target.dataset.color
+// }
+// for (const btn of buttonsColor) {
+//   btn.addEventListener('click', color)
+// }
+// const buttons = document.querySelectorAll("#buttons>button");
+// const flex = document.getElementById("flex");
 
+// const handleButtonClick = ({ target }) => {
 
+//   flex.style.flexDirection = target.innerText.toLowerCase();
+// };
 
+// for (const btn of buttons) {
+//   btn.addEventListener("click", handleButtonClick);}
 
-const imagesDB = [
-  "https://www.cbc.ca/kids/images/chinaanimals_header.jpg",
-  "https://i.natgeofe.com/k/66d3a80c-f4c3-4410-845c-3543375eaa85/cheetah-watching_3x4.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Giant_Panda_2004-03-2.jpg/1200px-Giant_Panda_2004-03-2.jpg",
-  "https://www.cbc.ca/kids/images/wild_and_wonderful_asian_animals_header_1140.jpg",
-];
+//
+//                                          ПРИ НАВЕДЕНИИ REVERSE
+//
+// const [openBtn, closeBtn] = document.getElementsByClassName('btn')
+// const reverse = () =>{
+// let buffer = openBtn.textContent
+// openBtn.textContent = closeBtn.textContent
+// closeBtn.textContent = buffer
+// }
+// openBtn.addEventListener("mouseover", reverse);
+// closeBtn.addEventListener("mouseover", reverse);
 
-const [prevBtn, nextBtn] = document.querySelectorAll(
-  ".slider-container button"
-);
-const img = document.querySelector(".slider-container .slider img");
+// const anchors = document.links;
+// console.log(anchors)
+// function anchorHandler(e){
+//     e.preventDefault()
+//     e.target.dataset.portSecret = '777'
+//     console.log(e.target.dataset.portSecret)
+// }
 
-const slider = new Slider(imagesDB);
+// for (const anchor of anchors) {
+//     anchor.addEventListener('click', anchorHandler)
+// }
 
-const createSlideBtnHandler =
-  (direction = "next") =>
-  () => {
-    slider.currentIndex = slider[direction === "next" ? "next" : "prev"];
-    updateView();
-  };
+// const imagesDB = [
+//   "https://www.cbc.ca/kids/images/chinaanimals_header.jpg",
+//   "https://i.natgeofe.com/k/66d3a80c-f4c3-4410-845c-3543375eaa85/cheetah-watching_3x4.jpg",
+//   "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Giant_Panda_2004-03-2.jpg/1200px-Giant_Panda_2004-03-2.jpg",
+//   "https://www.cbc.ca/kids/images/wild_and_wonderful_asian_animals_header_1140.jpg",
+// ];
 
-nextBtn.addEventListener("click", createSlideBtnHandler("next"));
-prevBtn.addEventListener("click", createSlideBtnHandler("prev"));
+// const [prevBtn, nextBtn] = document.querySelectorAll(
+//   ".slider-container button"
+// );
+// const img = document.querySelector(".slider-container .slider img");
 
-function updateView() {
-  img.setAttribute("src", slider.currentSlide);
-}
-img.setAttribute("src", slider.currentSlide);
+// const slider = new Slider(imagesDB);
+
+// const createSlideBtnHandler =
+//   (direction = "next") =>
+//   () => {
+//     slider.currentIndex = slider[direction === "next" ? "next" : "prev"];
+//     updateView();
+//   };
+
+// nextBtn.addEventListener("click", createSlideBtnHandler("next"));
+// prevBtn.addEventListener("click", createSlideBtnHandler("prev"));
+
+// function updateView() {
+//   img.setAttribute("src", slider.currentSlide);
+// }
+// img.setAttribute("src", slider.currentSlide);
 
 // function btnHandler(){
 //   console.log('button is clicked')

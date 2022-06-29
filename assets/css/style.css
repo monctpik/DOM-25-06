@@ -1,4 +1,42 @@
-body {
+:root{
+  font-size: 16px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#actors{
+  text-align: center;
+  
+}
+.actors-heading,
+.card-name,
+.card-info{
+  text-transform: capitalize;
+  padding: 10px 0;
+}
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  
+}
+.cards-wrapper{
+  margin: 10px;
+}
+.card-container{
+  border: 1px solid #aaa;
+}
+.card-photo{
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* body {
   display: block;
 }
 img {
@@ -27,4 +65,4 @@ img {
 }
 .btn-next {
   border-radius: 0px 400px 93px 0px / 26px 150px 0px 0px;
-}
+} */
